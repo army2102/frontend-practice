@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WISESIGHT - Thailand</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /*  */
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .header > a > img {
+      width: 220px;
+    }
+
+    .header > div {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .header > div > button {
+      background-color: white;
+      border: 0;
+    }
+
+    .header > div > button:hover {
+      color: #BA0020;
+    }
+
+    /*  */
+    .slider {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      height: 700px;
+      background-repeat: no-repeat;
+      background-image: url("https://wisesight.com/wp-content/uploads/2021/05/wisesight-banner-unlock.jpg");
+    }
+
+    .slider > p {
+      color: white;
+      font-size: 65px;
+      text-align: center;
+    }
+
+    .slider > button {
+      background-color: #BA0020;
+      border: 0;
+      color: white;
+
+      text-align: center;
+      font-size: 18px;
+      height: 60px;
+      width: 192px;
+      margin-bottom: 20px;
+    }
+
+    .slider > button:hover {
+      background-color: #ba001fdc;
+    }
+
+    /*  */
+    .solution {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .solution > p:nth-child(1) {
+      font-size: 42px;
+      font-weight: bold;
+      text-align: center;
+      color: black;
+      margin-bottom: 0;
+    }
+
+    .solution > p:nth-child(1) > mark {
+      background-color: black;
+      padding: 5px;
+      color: white;
+    }
+
+    .solution > p:nth-child(2) {
+      font-size: 16px;
+      color: #AEA8A5;
+      text-align: center;
+    }
+
+    .solution > div {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding: 50px 200px;
+      /* column-gap: 50px; */
+    }
+
+    .solution > div > div > p {
+      text-align: center;
+    }
+
+    .solution > div > div > p:nth-child(1) {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    
+    .solution > div > div > p:nth-child(2) {
+      font-size: 14px;
+      color: #BA0020;
+    }
+
+    /*  */
+    .wordcloud {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 400px;
+    }
+
+    /*  */
+    .experience {
+      display: flex;
+      flex-direction: column;
+      background-color: #FBFBFA;
+      padding-top: 50px;
+    }
+
+    .experience > p {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .experience > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .experience > div > div {
+      color: white;
+      padding: 10px;
+      width: 300px;
+      height: 800px;
+      background-image: url('./wisesight-red-background..webp');
+
+    }
+
+    .experience > div > div > p {
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: 14px;
+    }
+
+    .experience > div > div > p > strong {
+      font-size: 21px;
+    }
+
+    .experience > div > div > p:nth-child(1) {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .experience > div > div > p:nth-child(2) {
+      font-size: 16px;
+      text-align: left;
+      line-height: 28px;
+    }
+
+    /*  */
+    .contact-us {
+      display: flex;
+      flex-direction: row;
+      background-image: url('./wisesight-red-background..webp');
+      color: white;
+      padding: 100px 200px;
+      margin-top: 100px;
+      gap: 50px;
+      justify-content: center;
+    }
+
+    .contact-us > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-us > div:nth-child(1) > img {
+      align-self: center;
+      width: 54px;
+      height: 54px;
+    }
+    .contact-us > div:nth-child(1) > p:nth-child(1) {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .contact-us > div:nth-child(1) > p:nth-child(2) {
+      font-size: 24px;
+    }
+
+    .contact-us > div:nth-child(2) {
+      background-color: white;
+      border-radius: 10px;
+      color: black;
+      padding: 50px;
+    }
+
+    .contact-us > div:nth-child(2) > form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "header header" 
+        "radio radio"
+        "message message"
+        "name company"
+        "email mobile"
+        "promo-code promo-code"
+        "submit submit";
+
+      width: 500px;
+      height: 1000px;
+      gap: 10px;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .header {
+      align-self: center;
+      grid-area: header;
+      font-size: 27px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .radio {
+      grid-area: radio;
+      display: inline;
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .radio > p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .card {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .contact-us > div:nth-child(2) > form >  .card > label {
+      font-size: 18;
+      font-weight: bold;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .card > textarea,input {
+      background-color: #f7f6f6;
+      border: 0;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .card > textarea,input::placeholder {
+      color: #aea8a5;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .message {
+      grid-area: message;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .name {
+      grid-area: name;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .company {
+      grid-area: company;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .email {
+      grid-area: email;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .mobile {
+      grid-area: mobile;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .promo-code {
+      grid-area: promo-code;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .submit {
+      grid-area: submit;
+      font-size: 16px;
+      color: white;
+      background-color: #101820;
+      border: 0;
+    }
+
+    .contact-us > div:nth-child(2) > form >  .submit:hover {
+      background-color: #101820e8;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="https://wisesight.com/"><img src="./wisesight-logo.png" alt="wisesight logo"></a>
+      <div >
+        <button>PLATFORM</button>
+        <button>SERVICE</button>
+        <button>COMMUNITY</button>
+        <button>NEWS</button>
+        <button>ABOUT US </button>
+        <button>CAREERS</button>
+        <button>CONTACT US</button>
+      </div>
+    </div>
+    <div class="slider">
+      <div></div>
+      <p>UNLOCK POTENTIALS FOR SUSTAINABLE GROWTH IN ASIA PACIFIC</p>
+      <button onclick="window.location.href='#wordcloud'">LEARN MORE</a\button>
+    </div>
+    <div class="solution">
+      <p>OUR <mark>SOLUTION</mark> </p>
+      <p>GERRING TO KNOWN MORE ABOUT OUR PLATFORM & SERVICE</p>
+      <div>
+        <div>
+          <p>ZOCIAL EYE</p>
+          <p>ANAYTICS PLATFORM</p>
+        </div>
+        <div>
+          <p>WARROMM</p>
+          <p>ENGAGEMENT PLATFORM</p>
+        </div>
+        <div>
+          <p>COMMAND CENTER</p>
+          <p>REAL-TIME SOCIAL MONITORING DISPLAY</p>
+        </div>
+        <div>
+          <p>RESEARCH</p>
+          <p>DEEP MEANING RESEARCH</p>
+        </div>
+        <div>
+          <p>DATA CONSULTING</p>
+          <p>SOCIAL DATA CONSULTING SERVICE</p>
+        </div>
+        <div>
+          <p>CHATBOT SERVICE</p>
+          <p>OPTIMIZE AGENT WORKFORCE WITH ENHANCED A.I</p>
+        </div>
+        <div>
+          <p>MONITORING</p>
+          <p>PROFESSIONAL SOLUTION</p>
+        </div>
+        <div>
+          <p>SOCIAL RESPONSE SERVICE</p>
+          <p>RESPOND TO YOUR CUSTOMERS AS THEY ARE OURS WITH OUR TEAM OF PROFESSIONALS</p>
+        </div>
+        <div>
+          <p>TREND</p>
+          <p>READ-TIME SOCIAL MONITORING</p>
+        </div>
+        <div>
+          <p>REPORT</p>
+          <p>INDUSTRY BENCHMARKING</p>
+        </div>
+        <div>
+          <p>INFLUENCER PORTFOLIO</p>
+          <p>SHOWCASE YOUR PERFORMANCE TO A POTENTIAL CLIENT THROUGH A PROFESSIONAL PORTFOLIO</p>
+        </div>
+        <div>
+          <p>ONLINE PR CALCULATOR</p>
+          <p>MEASURE YOUR ONLINE PUBLIC RELATION CAMPAIGN IN 3 STEPS</p>
+        </div> 
+      </div>
+    </div>
+    <div id="wordcloud" class="wordcloud">
+      <img src="./wisesight-wordcloud.PNG" alt="Word Cloud">
+      <p><strong>WISESIGHT</strong> was founded in 2007, the same time with the arrival of social media platforms in Thailand, and have been growing strongly every year. With over 14 years of experience, now we collect biggest sources of market data in Thailand. We also continuously develop the most high-technology tools, thus, provide a wide range of social data analytics solutions that help consumer brands, agencies, government organizations, and educational institutions to unlock the potential of social media data in order to better take care of your customers and seek new market opportunities.</p>
+    </div>
+    <div class="experience">
+      <p>WORKING WITH WISESIGHT AND EXPERIENCE</p>
+      <div>
+        <div>
+          <p>HIGH EXPERTISE IN SOCIAL DATA ANALYTICS</p>
+          <p>Our team of analysts, developers, and business development executives are all equipped with expertise and technical knowledge in turning social media data into valuable insights. We always strive to make the best out of social media data.
+          </p>
+          <p><strong>2,000+ RESEARCH</strong><br>ISSUES / YEAR</p>
+          <p><strong>15+ YEARS OF EXPERIENCE</strong><br>WORKING WITH CLIENTS</p>
+          <p><strong>9+ YEARS OF EXPERIENCE</strong><br>SOCIAL DATA ANALYSTS</p>
+          <p><strong>100+ DATA ANALYSTS</strong><br>OR SCIENTISTS</p>
+        </div>
+        <div>
+          <p>MOST ADVANCED AND SECURED TOOLS</p>
+          <p>We are the leading company in advanced technology and ensuring the fastest, most powerful, and precise system for collecting, processing, and analyzing data. Our technology is highly reliable with our use of AWS services, the world’s most secure infrastructure, while our work process is standardized with certification of ISO 9001, ISO 27001, ISO 27017, ISO 27018.</p>
+          <p><strong>UNLIMITED KEYWORDS</strong></p>
+          <p><strong>REAL-TIME</strong><br>< 15 SECONDS</p>
+          <p><strong>WORLD CLASS AWS SERVICES</strong><br>CERTIFIED ISO 9001, ISO 27001, ISO 27017, ISO 27018</p>
+        </div>
+        <div>
+          <p>LARGEST VOLUME OF MARKET DATA</p>
+          <p>The number of active users of social media platforms in Thailand is growing every year. Therefore, the social media data we collect can be considered as the representative of Thai market, allowing you to understand not just your brand, but also competitors and consumers in the market.</p>
+          <p><strong>20+ BILLION</strong><br>VOICES</p>
+          <p><strong>4 YEARS</strong><br>HISTORICAL DATA</p>
+          <p><strong>LOCAL SOURCES</strong>E.G. PANTIP.COM, ETC.</p>
+        </div>
+        <div>
+          <p>BEST-IN-CLASS SERVICE</p>
+          <p>At Wisesight, we work towards the same goal which is to create the best experience for our clients. With complete service-minded and can-do attitudes, not only supports you’ll get from us, but we also proactively fine-tune and enhance every part of our solutions to best fit your needs.</p>
+          <p><strong>300+ CLIENTS</strong><br>BRANDS, AGENCIES, AND GOVERNMENT ORGANIZATIONS</p>
+          <p><strong>80% CONTINUE</strong><br>TO EXTEND CONTRACT</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us">
+      <div>
+        <img src="./wisesight-contect-us-icon.PNG" alt="">
+        <p>CONTACT US</p>
+        <p>LEAVE YOUR MESSAGE AND WE’LL<br>GET BACK TO YOU SHORTLY.</p>
+      </div>
+      <div>
+        <form action="">
+          <p class="header">IMPROVE YOUR BUSINESS SOLUTION</p>
+          
+          <div class="radio">
+            <p>WHICH PRODUCTS ARE YOU INTERESTED IN?</p>
+            <input type="checkbox" name="zocialeye" id="ZOCIAL EYE">
+            <label for="ZOCIAL EYE">ZOCIAL EYE</label>
+            <input type="checkbox" name="command_center" id="COMMAND CENTER">
+            <label for="COMMAND CENTER">COMMAND CENTER</label>
+            <input type="checkbox" name="WARROOM" id="WARROOM">
+            <label for="WARROOM">WARROOM</label>
+            <input type="checkbox" name="research" id="RESEARCH">
+            <label for="RESEARCH">RESEARCH</label>
+            <input type="checkbox" name="data_consulting" id="DATA CONSULTING">
+            <label for="DATA CONSULTING">DATA CONSULTING</label>
+            <input type="checkbox" name="zocial_eye_partnership_program" id="ZOCIAL EYE PARTNERSHIP PROGRAM">
+            <label for="ZOCIAL EYE PARTNERSHIP PROGRAM">ZOCIAL EYE PARTNERSHIP PROGRAM</label>
+            <input type="checkbox" name="chatbot-service" id="CHATBOT SERVICE">
+            <label for="CHATBOT SERVICE">CHATBOT SERVICE</label>
+            <input type="checkbox" name="social_monitoring_&_alert_service" id="SOCIAL MONITORING & ALERT SERVICE">
+            <label for="SOCIAL MONITORING & ALERT SERVICE">SOCIAL MONITORING & ALERT SERVICE</label>
+            <input type="checkbox" name="social_response_service" id="SOCIAL RESPONSE SERVICE">
+            <label for="SOCIAL RESPONSE SERVICE">SOCIAL RESPONSE SERVICE</label>
+            <input type="checkbox" name="fastseries" id="FASTSERIES">
+            <label for="FASTSERIES">FASTSERIES</label>
+          </div>
+          
+
+          <div class="message card">
+            <label for="message">MESSAGE</label>
+            <textarea name="" id="message" cols="50" rows="10" placeholder="Your Message"></textarea>
+          </div>
+          
+
+          <div class="name card">
+            <label for="name">NAME</label>
+            <input type="text" name="" id="name" placeholder="Your Name">
+          </div>
+          
+
+          <div class="company card">
+            <label for="company">NAME</label>
+            <input type="text" name="" id="company" placeholder="Your Company">
+          </div>
+          
+
+          <div class="email card">
+            <label for="email">EMAIL</label>
+            <input type="text" name="" id="email" placeholder="Email">
+          </div>
+          
+
+          <div class="mobile card">
+            <label for="mobile">MOBILE</label>
+            <input type="text" name="" id="mobile" placeholder="Your Mobile Number">
+          </div>
+          
+
+          <div class="promo-code card">
+            <label for="promo-code">PROMO CODE</label>
+            <input type="text" name="" id="promo-code" placeholder="Promo Code">
+          </div>
+
+
+          <button class="submit" type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
